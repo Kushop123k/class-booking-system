@@ -5,5 +5,3 @@ google-auth-oauthlib
 bcrypt
 requests
 gunicorn
-
-...
