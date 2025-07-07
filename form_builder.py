@@ -188,17 +188,14 @@ function onTimeTrigger() {{
       var notesUrl = {json.dumps(notes_url)};
 
       if (notesUrl && meetLink) {{
-        // Template: text + PDF + meet link
         url += "&text=bookmeet"
               + "&htype=document"
               + "&fname=" + encodeURIComponent("notes.pdf")
               + "&url=" + encodeURIComponent(notesUrl)
               + "&Params=" + encodeURIComponent(meetLink);
       }} else if (meetLink && !notesUrl) {{
-        // Template: text + meet link only
         url += "&text=" + encodeURIComponent("meet " + meetLink);
       }} else {{
-        // Template: text only
         url += "&text=" + encodeURIComponent("tex1");
       }}
 
@@ -266,6 +263,7 @@ function refreshSlots() {{
   form.setAcceptingResponses(choices.length > 0);
 }}
 """
+
 
 
 
