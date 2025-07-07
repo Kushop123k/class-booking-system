@@ -130,6 +130,8 @@ def admin_login():
 @app.route("/logout")
 def logout():
     session.clear()
+    if os.path.exists(GOOGLE_CREDS_FILE):
+        os.remove(GOOGLE_CREDS_FILE)
     return redirect(url_for("admin_login"))
 
 @app.route("/login")
